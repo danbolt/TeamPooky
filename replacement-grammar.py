@@ -32,6 +32,7 @@ def main():
 	rules = []
 	readingRules = True
 
+	# grab all the rules and parse them into a list; order is important
 	while (readingRules == True):
 		s = sys.stdin.readline().rstrip('\r\n')
 		if (len(s) == 0):
@@ -44,6 +45,7 @@ def main():
 	while (len(s) == 0):
 		s = sys.stdin.readline().rstrip('\r\n')
 
+	# woo! recursively apply all the rules onto the input string!
 	print translateWithRules(rules, s)
 	#
 
